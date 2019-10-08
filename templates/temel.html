@@ -16,7 +16,7 @@
   </head>
 
   <body>
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light custom" style="background-color:#0bb !important; color:#fff !important;">
       <a class="navbar-brand" href="{% url 'anasayfa' %}">Divan Media</a>
       <button
         class="navbar-toggler"
@@ -71,15 +71,15 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <a class="dropdown-item" href="{% url 'yazilar:koseyazilari' %}">Kose Yazilari</a>
-              <a class="dropdown-item" href="#">Analiz</a>
-              <a class="dropdown-item" href="#">Yazili Tarih</a>
-              <a class="dropdown-item" href="#">Makale</a>
+              <a class="dropdown-item" href="{% url 'yazilar:analiz' %}">Analiz</a>
+              <a class="dropdown-item" href="{% url 'yazilar:yazilitarih' %}">Yazili Tarih</a>
+              <a class="dropdown-item" href="{% url 'yazilar:makale' %}">Makale</a>
             </div>
           </li>
         </ul>
       </div>
     </nav>
-    <div class='container'>
+    <div class='container siteicerigi'>
 
       {% block content %} {% endblock%}
     </div>

@@ -2,8 +2,7 @@
 {% block content %}
 {% load static %}
 <body>
-  {% for yazi in yazilarim %} 
-  {% if yazi.kategori == 'K' %}
+ 
 
   <div class="col-md-10 blogShort">
         <h1>{{yazi.baslik}}</h1>
@@ -21,7 +20,6 @@
     </div>
     <hr/>
     </body>
-    {% endif %}
-    {% endfor %}
+
 </body>
 {% endblock content %}

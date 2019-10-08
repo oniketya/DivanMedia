@@ -6,13 +6,24 @@ def yazilar(request):
    return render(request, 'yazilar/yazilar.html')
 
 def koseyazilari(request):
-    koseyazilarim = Yazi.objects.all()
-    return render(request,'yazilar/koseyazilari.html',{'koseyazilarim':koseyazilarim})
+    yazilarim = Yazi.objects.all()
+    return render(request,'yazilar/koseyazilari.html',{'yazilarim':yazilarim})
 
-def analizler(request):
-    analizlerim = Yazi.objects.all()
-    return render(request, 'yazilar/analizler.html',{'analizlerim':analizlerim})
+def analiz(request):
+    yazilarim = Yazi.objects.all()
+    return render(request, 'yazilar/analiz.html',{'yazilarim':yazilarim})
+    
+def yazilitarih(request):
+    yazilarim = Yazi.objects.all()
+    return render(request, 'yazilar/yazilitarih.html',{'yazilarim':yazilarim})
+    
+def makale(request):
+    yazilarim = Yazi.objects.all()
+    return render(request, 'yazilar/makale.html',{'yazilarim':yazilarim})
 
 def tekyazi(request, yaziId):
-    yazilarim = Yazi.objects.all()
-    return render(request,'yazilar/tekyazi.html',{'yazilarim':yazilarim} )
+    try:
+        yazi = Yazi.objects.get(pk=yaziId)
+    except Yazi.DoesNotExist:
+        return render(request,'yazilar/yazibulunamadi.html')
+    return render(request,'yazilar/tekyazi.html',{'yazi':yazi},)

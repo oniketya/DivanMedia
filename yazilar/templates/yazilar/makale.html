@@ -2,18 +2,18 @@
 {% block content %}
 {% load static %}
 <body>
-  {% for analiz in analizlerim %} 
-  {% if analiz.kategori == 'K' %}
+  {% for yazi in yazilarim %} 
+  {% if yazi.kategori == 'M' %}
 
   <div class="col-md-10 blogShort">
-        <h1>{{analiz.baslik}}</h1>
+        <h1>{{yazi.baslik}}</h1>
         <img src="{% static 't.jpeg' %}" alt="post img" class="pull-left img-responsive thumb margin10 img-thumbnail">
         <br/>
         
-            <em>This snippet use <a href="#" target="#">blablabla</a></em>
+            <em>This snippet use <a href="" target="#">blablabla</a></em>
         <article><p>
         
-            {{analiz.icerik|truncatewords:60}}
+            {{yazi.icerik|truncatewords:60}}
 
        
             </p></article>
