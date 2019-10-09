@@ -1,4 +1,8 @@
-{% extends 'temel.html' %} {% block content %} {% load static %}
+{% extends 'temel.html' %} 
+{% block title %}
+Divan Media - Hata
+{% endblock title %}
+{% block content %} {% load static %}
 <body>
   <br />
   <div class="card ">
@@ -9,13 +13,18 @@
       <h5 class="card-title">Aradiginiz sayfa bulunamadi!</h5>
       <p class="card-text">
         Anasayfaya geri donmek icin asagidaki butona tiklayiniz.
-    </p>
-    <div class="">
+      </p>
+      <div class="">
+        <button type="button" class="btn btn-outline-primary">
+          <i class="fas fa-home"></i>
+          Anasayfa
+        </button>
 
-            <button type="button" class="btn btn-outline-primary">Anasayfa</button>
-            
-            <button type="button" class="btn btn-outline-secondary">Geri don</button>
-    </div>
+        <button type="button" class="btn btn-outline-secondary">
+            <i class="fas fa-chevron-left"></i>
+          Geri don
+        </button>
+      </div>
     </div>
   </div>
 </body>

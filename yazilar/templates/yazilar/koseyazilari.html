@@ -1,16 +1,18 @@
 {% extends 'temel.html' %} 
-{% block content %}
 {% load static %}
+{% block content %}
 <body>
   {% for yazi in yazilarim %} 
   {% if yazi.kategori == 'K' %}
+<div class="container siteicerigi">
 
   <div class="col-md-10 blogShort">
+    <hr/>
         <h1>{{yazi.baslik}}</h1>
         <img src="{% static 't.jpeg' %}" alt="post img" class="pull-left img-responsive thumb margin10 img-thumbnail">
         <br/>
         
-            <em>This snippet use <a href="" target="#">blablabla</a></em>
+            <em>This snippet use <a href="{% url 'yazilar:tekyazi' yaziId=yazi.id %}" target="">blablabla</a></em>
         <article><p>
         
             {{yazi.icerik|truncatewords:60}}
@@ -19,7 +21,7 @@
             </p></article>
         <a class="btn btn-blog pull-right marginBottom10" href="#">READ MORE</a> 
     </div>
-    <hr/>
+    </div>
     </body>
     {% endif %}
     {% endfor %}

@@ -11,12 +11,14 @@
     <link rel="stylesheet" href="{% static 'bootstrap-reboot.css' %}" />
     <link rel="stylesheet" href="{% static 'bootstrap.css' %}" />
     <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <script src="https://kit.fontawesome.com/abdafbb6be.js" crossorigin="anonymous"></script>
     <script src="{% static 'script.js' %}"></script>
-    <title>Anasayfa</title>
+    <title>{% block title %}
+    {% endblock title %}</title>
   </head>
 
-  <body>
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light custom" style="background-color:#0bb !important; color:#fff !important;">
+  <body class="conatiner siteicerigi">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light custom-red" >
       <a class="navbar-brand" href="{% url 'anasayfa' %}">Divan Media</a>
       <button
         class="navbar-toggler"
@@ -77,19 +79,52 @@
             </div>
           </li>
         </ul>
+        
       </div>
     </nav>
-    <div class='container siteicerigi'>
+    
 
       {% block content %} {% endblock%}
-    </div>
-    <div
-      class="fixed-bottom"
-      style="background-color:#eeeeee; text-align: center; padding-top: 15px"
-    >
-      <p>Telif Hakkı © 2019 Divan Media</p>
-    </div>
+   
+  
   </body>
+   <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            <li class="list-inline-item">
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <div style="text-align:center">
+          <p class="copyright text-muted">Copyright &copy; Your Website 2019</p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </footer>
   <script
     src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

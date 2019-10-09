@@ -1,8 +1,31 @@
+
 body{
     margin-bottom: 50px;
-    background-color: honeydew
+    background-color: #ffffff
 }
-.siteicerigi{
-    background-color: white;
-    padding-bottom: 20px;
+
+.custom-red{
+    background-color: #b40b1a !important;
+    -webkit-box-shadow: 3px 4px 34px -9px rgba(0,0,0,0.26);
+-moz-box-shadow: 3px 4px 34px -9px rgba(0,0,0,0.26);
+box-shadow: 3px 4px 34px -9px rgba(0,0,0,0.46);
+
+
+}
+
+.custom-red > a, .nav-link{
+    color: #ffffff !important;
+}
+
+.bottom{
+    padding-bottom: 10px;
+    background-color: ;
+    -webkit-box-shadow: 3px -4px 34px -9px rgba(0,0,0,0.48);
+-moz-box-shadow: 3px -4px 34px -9px rgba(0,0,0,0.48);
+box-shadow: 3px -4px 34px -9px rgba(0,0,0,0.26);
+}
+
+footer{
+    border-top: solid #dddddd 1px;
+    padding-top: 35px;
 }
